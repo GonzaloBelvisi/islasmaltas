@@ -8,7 +8,6 @@
     <title>Video de Fondo con Imagen</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -23,8 +22,18 @@
     <div class="image-container">
         <img src="Recurso 1@2x.png" usemap="#test-map">
         <map name="test-map">
-            <area shape="rect" coords="100,100,300,300" href="javascript:void(0);"
-                onclick="playVideo('video-highlands')" alt="Test Area">
+            <!-- Nuevas áreas basadas en las coordenadas proporcionadas -->
+            <area shape="poly" coords="103,404,102,300,138,260,174,290,190,350,176,461,134,452" href="javascript:void(0);" onclick="playVideo('video-islands')" alt="Islands">
+            <area shape="poly" coords="192,386,177,531,388,419,329,326,284,331,239,356,217,371,208,385,200,384,206,387,199,387" href="javascript:void(0);" onclick="playVideo('video-lowlands')" alt="Lowlands">
+            <area shape="rect" coords="185,520,381,411" href="javascript:void(0);" onclick="playVideo('video-lowlands')" alt="Lowlands">
+            <area shape="poly" coords="284,98,239,160,248,189,305,120,319,106,316,86,302,86" href="javascript:void(0);" onclick="playVideo('video-islands')" alt="Islands">
+            <area shape="poly" coords="187,227,381,243,345,313,281,328,205,375,166,255" href="javascript:void(0);" onclick="playVideo('video-highlands')" alt="Highlands">
+            <area shape="poly" coords="192,77,311,67,181,225,132,193" href="javascript:void(0);" onclick="playVideo('video-highlands')" alt="Highlands">
+            <area shape="poly" coords="187,225,171,287,137,254,129,221,133,198,157,207" href="javascript:void(0);" onclick="playVideo('video-highlands')" alt="Highlands">
+            <area shape="poly" coords="388,178,399,199,376,243,346,239,360,193,361,183" href="javascript:void(0);" onclick="playVideo('video-highlands')" alt="Highlands">
+            <area shape="poly" coords="294,177,360,182,346,232,292,235,236,215,244,203,259,188" href="javascript:void(0);" onclick="playVideo('video-speyside')" alt="Speyside">
+            <area shape="poly" coords="24,269,133,90,95,63,23,167,13,208,11,243,14,259" href="javascript:void(0);" onclick="playVideo('video-highlands')" alt="Highlands">
+            <area shape="poly" coords="181,226,230,172,241,231" href="javascript:void(0);" onclick="playVideo('video-highlands')" alt="Highlands">
         </map>
     </div>
 
@@ -50,7 +59,6 @@
         <button class="close-btn" onclick="closeVideo('video-islands')">X</button>
     </div>
 
-    <!-- Modal de video para "The Highlands" -->
     <div class="video-modal" id="video-highlands">
         <video controls autoplay loop>
             <source src="Animacion Isla Maltas Duty Free Uruguay Highlands.mp4" type="video/mp4">
@@ -61,14 +69,15 @@
 
     <div class="video-modal" id="video-speyside">
         <video controls autoplay loop>
-            <source src="Animacion Isla Maltas Duty Free Uruguay Speyside.mp4">
+            <source src="Animacion Isla Maltas Duty Free Uruguay Speyside.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
         <button class="close-btn" onclick="closeVideo('video-speyside')">X</button>
     </div>
+
     <div class="video-modal" id="video-lowlands">
         <video controls autoplay loop>
-            <source src="Animacion Isla Maltas Duty Free Uruguay Lowlands.mp4">
+            <source src="Animacion Isla Maltas Duty Free Uruguay Lowlands.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
         <button class="close-btn" onclick="closeVideo('video-lowlands')">X</button>
