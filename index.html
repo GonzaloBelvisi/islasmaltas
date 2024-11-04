@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video de Fondo con Imagen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="shutterstock_1109744571.mov" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+
+    <!-- Imagen del mapa con el mapa de imagen -->
+    <div class="image-container">
+        <img src="Recurso 1@2x.png" usemap="#test-map">
+        <map name="test-map">
+            <area shape="rect" coords="100,100,300,300" href="javascript:void(0);"
+                onclick="playVideo('video-highlands')" alt="Test Area">
+        </map>
+    </div>
+
+    <div class="content">
+        <h1>Bienvenido</h1>
+        <p>Este es un ejemplo de una página con video de fondo y una imagen centrada.</p>
+    </div>
+
+    <!-- Sección de botones con imágenes como fondo -->
+    <div class="button-container">
+        <div class="circle-button" id="islands" onclick="playVideo('video-islands')"></div>
+        <div class="circle-button" id="highlands" onclick="playVideo('video-highlands')"></div>
+        <div class="circle-button" id="speyside" onclick="playVideo('video-speyside')"></div>
+        <div class="circle-button" id="lowlands" onclick="playVideo('video-lowlands')"></div>
+    </div>
+
+    <!-- Contenedores de los videos -->
+    <div class="video-modal" id="video-islands">
+        <video controls autoplay loop>
+            <source src="Animacion Isla Maltas Duty Free Uruguay Islands.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <button class="close-btn" onclick="closeVideo('video-islands')">X</button>
+    </div>
+
+    <!-- Modal de video para "The Highlands" -->
+    <div class="video-modal" id="video-highlands">
+        <video controls autoplay loop>
+            <source src="Animacion Isla Maltas Duty Free Uruguay Highlands.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <button class="close-btn" onclick="closeVideo('video-highlands')">X</button>
+    </div>
+
+    <div class="video-modal" id="video-speyside">
+        <video controls autoplay loop>
+            <source src="Animacion Isla Maltas Duty Free Uruguay Speyside.mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <button class="close-btn" onclick="closeVideo('video-speyside')">X</button>
+    </div>
+    <div class="video-modal" id="video-lowlands">
+        <video controls autoplay loop>
+            <source src="Animacion Isla Maltas Duty Free Uruguay Lowlands.mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <button class="close-btn" onclick="closeVideo('video-lowlands')">X</button>
+    </div>
+
+    <!-- Footer añadido -->
+    <footer>
+        <p>Prohibida la venta a menores de 18 años de edad. El abuso en el consumo de alcohol es nocivo para su salud.
+            <span>#MENORESNIUNAGOTA</span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

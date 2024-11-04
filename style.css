@@ -1,0 +1,168 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Estilos del contenedor de la imagen */
+.image-container {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.image-container img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos del contenido */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    top: 60%;
+    transform: translateY(-60%);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue', sans-serif; /* Cambia la fuente a Bebas Neue */
+    z-index: 2;
+    /* Elimina font-weight: bold para que no esté en negrita */
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+footer span {
+    color: #e30000;
+    /* Elimina font-weight: bold si no quieres que esté en negrita */
+}
+
+
+
+/* Estilos para los botones circulares con imágenes */
+.button-container {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.circle-button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* Asignar las imágenes de fondo a los botones */
+#islands {
+    background-image: url('Recurso\ 4@2x.png'); /* Cambia esta imagen a la que necesites para Islands */
+}
+
+#highlands {
+    background-image: url('Recurso\ 7@2x.png'); /* Cambia esta imagen a la que necesites para Highlands */
+}
+
+#speyside {
+    background-image: url('Recurso\ 8@2x.png'); /* Cambia esta imagen a la que necesites para Speyside */
+}
+
+#lowlands {
+    background-image: url('Recurso\ 9@2x.png'); /* Cambia esta imagen a la que necesites para Lowlands */
+}
+
+/* Estilos del modal de video */
+.video-modal {
+    display: none; /* Asegurarse que esté oculto al cargar la página */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.video-modal video {
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
