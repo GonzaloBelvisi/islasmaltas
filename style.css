@@ -165,14 +165,19 @@ footer span {
 
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: white;
+    top: 2%;  /* Ajusta según sea necesario para mantenerlo alineado */
+    left: 19%; /* Ajusta según sea necesario para mantenerlo alineado */
+    font-size: 4rem;  /* Cambiado a 4rem para hacer la "X" más grande */
+    color: transparent;
     background: transparent;
     border: none;
     cursor: pointer;
+    z-index: 101;
+    width: 51px;  /* Ajustado para darle más espacio al botón */
+    height: 51px; /* Ajustado para darle más espacio al botón */
 }
+
+
 
 
 /* Ocultar los controles en Safari y otros navegadores */
