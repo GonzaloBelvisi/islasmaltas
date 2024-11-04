@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video de Fondo con Imagen</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Asegúrate de que el archivo style.css esté en la misma carpeta que index.html -->
+    <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="video-background">
         <video autoplay muted loop id="bg-video">
-            <source src="shutterstock_1109744571.mov" type="video/mp4">
+            <source src="./shutterstock_1109744571.mov" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
     </div>
 
     <!-- Imagen del mapa con el mapa de imagen -->
     <div class="image-container">
-        <img src="Recurso 1@2x.png" usemap="#test-map">
+        <img src="./Recurso 1@2x.png" usemap="#test-map">
         <map name="test-map">
             <!-- Nuevas áreas basadas en las coordenadas proporcionadas -->
             <area shape="poly" coords="103,404,102,300,138,260,174,290,190,350,176,461,134,452" href="javascript:void(0);" onclick="playVideo('video-islands')" alt="Islands">
@@ -53,7 +54,7 @@
     <!-- Contenedores de los videos -->
     <div class="video-modal" id="video-islands">
         <video loop playsinline>
-            <source src="Animacion Isla Maltas Duty Free Uruguay Islands.mp4" type="video/mp4">
+            <source src="./Animacion Isla Maltas Duty Free Uruguay Islands.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
         <button class="close-btn" onclick="closeVideo('video-islands')">X</button>
@@ -61,7 +62,7 @@
 
     <div class="video-modal" id="video-highlands">
         <video loop playsinline>
-            <source src="Animacion Isla Maltas Duty Free Uruguay Highlands.mp4" type="video/mp4">
+            <source src="./Animacion Isla Maltas Duty Free Uruguay Highlands.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
         <button class="close-btn" onclick="closeVideo('video-highlands')">X</button>
@@ -69,7 +70,7 @@
 
     <div class="video-modal" id="video-speyside">
         <video loop playsinline>
-            <source src="Animacion Isla Maltas Duty Free Uruguay Speyside.mp4" type="video/mp4">
+            <source src="./Animacion Isla Maltas Duty Free Uruguay Speyside.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
         <button class="close-btn" onclick="closeVideo('video-speyside')">X</button>
@@ -77,7 +78,7 @@
 
     <div class="video-modal" id="video-lowlands">
         <video loop playsinline>
-            <source src="Animacion Isla Maltas Duty Free Uruguay Lowlands.mp4" type="video/mp4">
+            <source src="./Animacion Isla Maltas Duty Free Uruguay Lowlands.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
         <button class="close-btn" onclick="closeVideo('video-lowlands')">X</button>
