@@ -5,8 +5,6 @@
     box-sizing: border-box;
 }
 
-
-
 body,
 html {
     height: 100%;
@@ -41,13 +39,13 @@ html {
 .image-container {
     position: relative;
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%; /* Mueve el mapa más arriba */
+    transform: translateY(-30%);
     z-index: 1;
 }
 
 .image-container img {
-    max-width: 400px;
+    max-width: 500px; /* Incrementa el tamaño del mapa */
     width: 100%;
     height: auto;
 }
@@ -82,9 +80,7 @@ footer {
     padding: 20px 0;
     font-size: 1.2rem;
     font-family: 'Bebas Neue', sans-serif;
-    /* Cambia la fuente a Bebas Neue */
     z-index: 2;
-    /* Elimina font-weight: bold para que no esté en negrita */
 }
 
 footer p {
@@ -95,15 +91,19 @@ footer p {
 
 footer span {
     color: #e30000;
-    /* Elimina font-weight: bold si no quieres que esté en negrita */
 }
 
+footer img {
+    width: 100%;  /* Hace que la imagen ocupe todo el ancho del footer */
+    max-height: 900px;  /* Ajusta según sea necesario */
+    object-fit: contain;  /* Asegura que la imagen se ajuste sin distorsionarse */
+}
 
 
 /* Estilos para los botones circulares con imágenes */
 .button-container {
     position: absolute;
-    bottom: 80px;
+    bottom: 150px; /* Mueve los botones más arriba para que no toquen el mapa */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -122,28 +122,23 @@ footer span {
 /* Asignar las imágenes de fondo a los botones */
 #islands {
     background-image: url('Recurso\ 4@2x.png');
-    /* Cambia esta imagen a la que necesites para Islands */
 }
 
 #highlands {
     background-image: url('Recurso\ 7@2x.png');
-    /* Cambia esta imagen a la que necesites para Highlands */
 }
 
 #speyside {
     background-image: url('Recurso\ 8@2x.png');
-    /* Cambia esta imagen a la que necesites para Speyside */
 }
 
 #lowlands {
     background-image: url('Recurso\ 9@2x.png');
-    /* Cambia esta imagen a la que necesites para Lowlands */
 }
 
 /* Estilos del modal de video */
 .video-modal {
     display: none;
-    /* Asegurarse que esté oculto al cargar la página */
     position: fixed;
     top: 0;
     left: 0;
@@ -155,7 +150,6 @@ footer span {
     justify-content: center;
     align-items: center;
 }
-
 
 .video-modal video {
     width: 80%;
@@ -177,9 +171,6 @@ footer span {
     height: 51px; /* Ajustado para darle más espacio al botón */
 }
 
-
-
-
 /* Ocultar los controles en Safari y otros navegadores */
 video::-webkit-media-controls {
     display: none !important;
@@ -188,7 +179,5 @@ video::-webkit-media-controls {
 /* Asegurar que el video se muestre sin controles en general */
 video {
     outline: none;
-    /* Remover cualquier borde de enfoque en Safari */
     -webkit-appearance: none;
-    /* Desactivar apariencia por defecto en Webkit */
 }

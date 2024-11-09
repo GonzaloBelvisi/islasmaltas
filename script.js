@@ -18,7 +18,7 @@ function playVideo(id) {
     // Muestra el modal
     modal.style.display = "flex";
 }
-
+ 
 function closeVideo(id) {
     // Oculta el modal
     const modal = document.getElementById(id);
