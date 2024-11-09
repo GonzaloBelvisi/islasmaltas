@@ -7,11 +7,11 @@
 
 
 
-
 body,
 html {
     height: 100%;
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Evitar el scroll en la página */
 }
 
 .video-background {
