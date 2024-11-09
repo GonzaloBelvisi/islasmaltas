@@ -39,8 +39,8 @@ html {
 .image-container {
     position: relative;
     text-align: center;
-    top: 30%; /* Mueve el mapa más arriba */
-    transform: translateY(-30%);
+    top: 20%; /* Mueve el mapa más arriba */
+    transform: translateY(-15%);
     z-index: 1;
 }
 
@@ -143,7 +143,7 @@ footer img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 95%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 100;
     display: flex;
