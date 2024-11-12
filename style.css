@@ -164,6 +164,7 @@ footer img {
     max-width: 590px;
     border-radius: 10px;
     z-index: 101;
+    transform: translateY(-30px)
 }
 
 .close-btn {
