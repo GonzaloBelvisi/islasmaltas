@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>mapa</title>
-    <!-- Asegúrate de que el archivo style.css esté en la misma carpeta que index.html -->
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
@@ -21,11 +20,25 @@
 
     <!-- Imagen del mapa con el mapa de imagen -->
     <div class="image-container">
-        <img src="./Recurso 1@2x.png" usemap="#test-map">
-        <map name="test-map">
+        <img src="./Recurso 12x.png" usemap="#image-map" alt="Mapa de Regiones de Whisky">
+        <map name="image-map">
+            <!-- Áreas para Highlands -->
             <area target="" alt="Highlands" title="Highlands" href="javascript:void(0);" onclick="playVideo('video-highlands')" coords="387,88,237,92,182,284" shape="poly">
             <area target="" alt="Highlands" title="Highlands" href="javascript:void(0);" onclick="playVideo('video-highlands')" coords="188,281,260,463,446,309" shape="poly">
-            <area target="" alt="Highlands" title="Highlands" href="javascript:void(0);" onclick="playVideo('video-highlands')" coords="279,197,289,289,199,276" shape="poly">
+            <area target="" alt="Highlands" title="Highlands" href="javascript:void(0);" onclick="playVideo('video-highlands')" coords="279,197,289,289,199,276,237,235" shape="poly">
+            <area target="" alt="Highlands" title="Highlands" href="javascript:void(0);" onclick="playVideo('video-highlands')" coords="267,464,447,309,431,391,412,386" shape="poly">
+            <area target="" alt="Highlands" title="Highlands" href="javascript:void(0);" onclick="playVideo('video-highlands')" coords="456,227,495,242,464,317,439,304" shape="poly">
+            <area target="" alt="Highlands" title="Highlands" href="javascript:void(0);" onclick="playVideo('video-highlands')" coords="149,103,71,133,21,339,50,328" shape="poly">
+            
+            <!-- Área para Lowlands -->
+            <area target="" alt="Lowlands" title="Lowlands" href="javascript:void(0);" onclick="playVideo('video-lowlands')" coords="245,493,404,401,499,511,397,629,345,645,313,659,281,670,217,642,248,568" shape="poly">
+
+            <!-- Áreas para Islands -->
+            <area target="" alt="Islands" title="Islands" href="javascript:void(0);" onclick="playVideo('video-islands')" coords="173,323,71,390,175,579,243,449,220,372" shape="poly">
+            <area target="" alt="Islands" title="Islands" href="javascript:void(0);" onclick="playVideo('video-islands')" coords="354,123,292,199,306,241,389,129,389,109" shape="poly">
+
+            <!-- Área para Speyside -->
+            <area target="" alt="Speyside" title="Speyside" href="javascript:void(0);" onclick="playVideo('video-speyside')" coords="365,218,449,223,436,301,346,294,294,267,304,253" shape="poly">
         </map>
     </div>
 
@@ -39,7 +52,7 @@
 
     <!-- Contenedores de los videos -->
     <div class="video-modal" id="video-islands">
-        <video loop playsinline>
+        <video  playsinline>
             <source src="./Animacion Isla Maltas Duty Free Uruguay Islands.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
@@ -47,7 +60,7 @@
     </div>
 
     <div class="video-modal" id="video-highlands">
-        <video loop playsinline>
+        <video  playsinline>
             <source src="./Animacion Isla Maltas Duty Free Uruguay Highlands.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
@@ -55,7 +68,7 @@
     </div>
 
     <div class="video-modal" id="video-speyside">
-        <video loop playsinline>
+        <video  playsinline>
             <source src="./Animacion Isla Maltas Duty Free Uruguay Speyside.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
@@ -63,7 +76,7 @@
     </div>
 
     <div class="video-modal" id="video-lowlands">
-        <video loop playsinline>
+        <video  playsinline>
             <source src="./Animacion Isla Maltas Duty Free Uruguay Lowlands.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
@@ -76,15 +89,14 @@
     </footer>
 
     <script>
-        // Ocultar todos los modales cuando se carga la página
         window.onload = function () {
             const modals = document.querySelectorAll('.video-modal');
             modals.forEach(modal => {
                 modal.style.display = "none";
                 const video = modal.querySelector('video');
                 if (video) {
-                    video.pause(); // Asegúrate de que el video esté pausado
-                    video.currentTime = 0; // Reinicia el video al inicio
+                    video.pause();
+                    video.currentTime = 0;
                 }
             });
         };
@@ -92,16 +104,29 @@
         function playVideo(id) {
             const modal = document.getElementById(id);
             const video = modal.querySelector('video');
+            
+            // Reinicia y reproduce el video
             video.currentTime = 0;
             video.play();
             modal.style.display = "flex";
+
+            // Agrega un evento 'ended' para cerrar el modal cuando termine el video
+            video.onended = function() {
+                closeVideo(id);
+            };
         }
 
         function closeVideo(id) {
             const modal = document.getElementById(id);
             const video = modal.querySelector('video');
+            
+            // Pausa el video y oculta el modal
             video.pause();
+            video.currentTime = 0;
             modal.style.display = "none";
+
+            // Elimina el evento 'ended' para evitar conflictos si se vuelve a abrir
+            video.onended = null;
         }
     </script>
 </body>
