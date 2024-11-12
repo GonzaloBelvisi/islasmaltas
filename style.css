@@ -161,7 +161,7 @@ footer img {
 
 .video-modal video {
     width: 80%;
-    max-width: 590px;
+    max-width: 620px;
     border-radius: 10px;
     z-index: 101;
     transform: translateY(-30px)
