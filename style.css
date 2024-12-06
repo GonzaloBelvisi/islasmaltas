@@ -160,11 +160,10 @@ footer img {
 }
 
 .video-modal video {
-    width: 80%;
-    max-width: 620px;
-    border-radius: 10px;
-    z-index: 101;
-    transform: translateY(-30px)
+    width: 100%; /* El video ocupa todo el ancho */
+    height: 100%; /* El video ocupa toda la altura */
+    object-fit: cover; /* Asegura que el video llene el espacio sin deformarse */
+    border-radius: 0; /* Elimina el borde redondeado para adaptarse mejor a la pantalla */
 }
 
 .close-btn {
