@@ -168,10 +168,10 @@ footer img {
 
 .close-btn {
     position: absolute;
-    top: 2%;  /* Ajusta según sea necesario para mantenerlo alineado */
+    top: -2%;  /* Ajusta según sea necesario para mantenerlo alineado */
     left: 19%; /* Ajusta según sea necesario para mantenerlo alineado */
     font-size: 4rem;  /* Cambiado a 4rem para hacer la "X" más grande */
-    color: transparent;
+    color: red;
     background: transparent;
     border: none;
     cursor: pointer;
